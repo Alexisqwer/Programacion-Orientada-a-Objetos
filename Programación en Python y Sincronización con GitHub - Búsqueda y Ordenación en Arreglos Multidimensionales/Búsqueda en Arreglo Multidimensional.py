@@ -15,7 +15,7 @@ matriz_ejemplo = [
 ]
 
 # Valor a buscar
-valor_a_buscar = 5
+valor_a_buscar = 8
 
 # Llamar a la función de búsqueda
 encontrado, posicion = buscar_valor(matriz_ejemplo, valor_a_buscar)
