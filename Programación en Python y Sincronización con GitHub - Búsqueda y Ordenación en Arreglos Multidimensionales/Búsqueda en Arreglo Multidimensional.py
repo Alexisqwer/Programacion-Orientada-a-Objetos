@@ -15,7 +15,7 @@ matriz_ejemplo = [
 ]
 
 # Valor a buscar
-valor_a_buscar = 8
+valor_a_buscar = int(input("ingrese el valor de la matriz que desea buscar: "))
 
 # Llamar a la función de búsqueda
 encontrado, posicion = buscar_valor(matriz_ejemplo, valor_a_buscar)
