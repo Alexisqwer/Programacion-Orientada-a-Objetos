@@ -1,5 +1,3 @@
-#Pizarra (Whiteboard)
-
 # Crear una matriz 3D para almacenar datos de temperaturas
 # Primera dimensión: Ciudades (3 ciudades)
 # Segunda dimensión: Semanas (4 semanas)
