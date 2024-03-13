@@ -3,8 +3,6 @@
 # Segunda dimensión: Semanas (4 semanas)
 # Tercera dimensión: Días de la semana (7 días)
 
-# Lista de ciudades
-ciudades = ["Quito", "Guayaquil", "Cuenca"]
 # Matriz 3D de temperaturas
 temperaturas = [
     [   # Quito
@@ -123,36 +121,39 @@ temperaturas = [
     ]
 ]
 def calcular_promedio(suma_acumulada, total_acumulado):
-  """
-  Calcula el promedio de dos valores.
+    """
+    Calcula el promedio de dos valores.
 
-  Parámetros:
-    suma_acumulada: La suma acumulada de los valores.
-    total_acumulado: El número total de valores.
+    Parámetros:
+      suma_acumulada: La suma acumulada de los valores.
+      total_acumulado: El número total de valores.
 
-  Retorno:
-    El promedio de los valores.
-  """
-  return round(suma_acumulada / total_acumulado, 2)
+    Retorno:
+      El promedio de los valores.
+    """
+    return round(suma_acumulada / total_acumulado, 2)
+
+# Lista de ciudades
+ciudades = ["Quito", "Guayaquil", "Cuenca"]
 
 # Calcular el promedio de temperaturas para cada ciudad y semana
 no_ciudad = 0
-for ciudad in temperaturas:
-  no_ciudad += 1
-  print(f"CIUDAD No. {no_ciudad}")
-  no_semana = 0
-  suma_promedio = 0
-  for semana in ciudad:
-    no_semana += 1
-    suma = 0
-    for dia in semana:
-      # Sumamos la temperatura de cada día
-      suma += dia["temp"]
-    # Calculamos el promedio de la semana
-    promedio = calcular_promedio(suma, len(semana))
-    # Acumulamos el promedio de la semana para calcular el promedio mensual
-    suma_promedio += promedio
-    print(f"El promedio semana No. {no_semana} es: {promedio}")
-  # Calculamos el promedio mensual
-  promedio_ciudad = calcular_promedio(suma_promedio, len(ciudad))
-  print(f"El promedio mensual es: {promedio_ciudad}")
+for ciudad, temperaturas_ciudad in zip(ciudades, temperaturas):
+    no_ciudad += 1
+    print(f"CIUDAD {no_ciudad}: {ciudad}")
+    no_semana = 0
+    suma_promedio = 0
+    for semana in temperaturas_ciudad:
+        no_semana += 1
+        suma = 0
+        for dia in semana:
+            # Sumamos la temperatura de cada día
+            suma += dia["temp"]
+        # Calculamos el promedio de la semana
+        promedio = calcular_promedio(suma, len(semana))
+        # Acumulamos el promedio de la semana para calcular el promedio mensual
+        suma_promedio += promedio
+        print(f"  El promedio de la semana {no_semana} es: {promedio}")
+    # Calculamos el promedio mensual
+    promedio_ciudad = calcular_promedio(suma_promedio, len(temperaturas_ciudad))
+    print(f"  El promedio mensual de {ciudad} es: {promedio_ciudad}")
