@@ -6,7 +6,8 @@ informacion_personal = {
     "profesion": "Ingeniero en tegnologias de la informacion"
 }
 #imprime todos los elementos del diccionario informacion_personal
-print(informacion_personal)
+for key in informacion_personal:
+    print(f"{key}: {informacion_personal[key]}")
 
 # Acceder y modificar el valor asociado con la clave "ciudad"
 informacion_personal["ciudad"] = "Quito"
@@ -25,4 +26,5 @@ else:
 del informacion_personal["edad"]
 
 # Imprimir el diccionario final
-print(informacion_personal)
+for key in informacion_personal:
+    print(f"{key}: {informacion_personal[key]}")
