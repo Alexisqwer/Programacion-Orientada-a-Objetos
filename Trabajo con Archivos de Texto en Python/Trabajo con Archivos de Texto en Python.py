@@ -8,7 +8,7 @@ my_notes.write("2. Llamar a mamá para su cumpleaños.\n")
 my_notes.write("3. Terminar el proyecto de Python antes del viernes.\n")
 
 # Método writelines(): escribir una lista de líneas
-lineas = ["4. Preparar el informe para la reunión del equipo.\n", "5. Hacer ejercicio al menos 30 minutos al día.\n"]
+lineas = ["Agrega una lista de notas personales adicionales.\n", "4. Preparar el informe para la reunión del equipo.\n", "5. Hacer ejercicio al menos 30 minutos al día.\n"]
 my_notes.writelines(lineas)
 
 # Abre el archivo my_notes.txt.
