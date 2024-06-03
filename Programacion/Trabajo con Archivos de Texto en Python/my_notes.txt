@@ -1,0 +1,7 @@
+Estas son mis notas personales:
+1. Recordar comprar leche en el supermercado.
+2. Llamar a mamá para su cumpleaños.
+3. Terminar el proyecto de Python antes del viernes.
+Agrega una lista de notas personales adicionales.
+4. Preparar el informe para la reunión del equipo.
+5. Hacer ejercicio al menos 30 minutos al día.
