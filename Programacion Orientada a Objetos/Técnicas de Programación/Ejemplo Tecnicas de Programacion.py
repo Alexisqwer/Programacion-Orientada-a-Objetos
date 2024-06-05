@@ -9,10 +9,10 @@ class Personaje:
 
     def atributos(self):
         print(self.nombre, ":", sep="")
-        print("稦uerza:", self.fuerza)
-        print("稩nteligencia:", self.inteligencia)
-        print("稤efensa:", self.defensa)
-        print("稸ida:", self.vida)
+        print("路Fuerza:", self.fuerza)
+        print("路Inteligencia:", self.inteligencia)
+        print("路Defensa:", self.defensa)
+        print("路Vida:", self.vida)
 
     def subir_nivel(self, fuerza, inteligencia, defensa):
         self.fuerza = self.fuerza + fuerza
@@ -26,13 +26,13 @@ class Personaje:
         self.vida = 0
         print(self.nombre, "ha muerto")
 
-    def da駉(self, enemigo):
+    def da帽o(self, enemigo):
         return self.fuerza - enemigo.defensa
 
     def atacar(self, enemigo):
-        da駉 = self.da駉(enemigo)
-        enemigo.vida = enemigo.vida - da駉
-        print(self.nombre, "ha realizado", da駉, "puntos de da駉 a", enemigo.nombre)
+        da帽o = self.da帽o(enemigo)
+        enemigo.vida = enemigo.vida - da帽o
+        print(self.nombre, "ha realizado", da帽o, "puntos de da帽o a", enemigo.nombre)
         if enemigo.esta_vivo():
             print("Vida de", enemigo.nombre, "es", enemigo.vida)
         else:
@@ -46,19 +46,19 @@ class Guerrero(Personaje):
         self.espada = espada
 
     def cambiar_arma(self):
-        opcion = int(input("Elige un arma: (1) Acero Valyrio, da駉 8. (2) Matadragones, da駉 10"))
+        opcion = int(input("Elige un arma: (1) Acero Valyrio, da帽o 8. (2) Matadragones, da帽o 10"))
         if opcion == 1:
             self.espada = 8
         elif opcion == 2:
             self.espada = 10
         else:
-            print("N鷐ero de arma incorrecta")
+            print("N煤mero de arma incorrecta")
 
     def atributos(self):
         super().atributos()
-        print("稥spada:", self.espada)
+        print("路Espada:", self.espada)
 
-    def da駉(self, enemigo):
+    def da帽o(self, enemigo):
         return self.fuerza * self.espada - enemigo.defensa
 
 
@@ -70,9 +70,9 @@ class Mago(Personaje):
 
     def atributos(self):
         super().atributos()
-        print("稬ibro:", self.libro)
+        print("路Libro:", self.libro)
 
-    def da駉(self, enemigo):
+    def da帽o(self, enemigo):
         return self.inteligencia * self.libro - enemigo.defensa
 
 
@@ -80,9 +80,9 @@ def combate(jugador_1, jugador_2):
     turno = 0
     while jugador_1.esta_vivo() and jugador_2.esta_vivo():
         print("\nTurno", turno)
-        print(">>> Acci髇 de ", jugador_1.nombre, ":", sep="")
+        print(">>> Acci贸n de ", jugador_1.nombre, ":", sep="")
         jugador_1.atacar(jugador_2)
-        print(">>> Acci髇 de ", jugador_2.nombre, ":", sep="")
+        print(">>> Acci贸n de ", jugador_2.nombre, ":", sep="")
         jugador_2.atacar(jugador_1)
         turno = turno + 1
     if jugador_1.esta_vivo():
