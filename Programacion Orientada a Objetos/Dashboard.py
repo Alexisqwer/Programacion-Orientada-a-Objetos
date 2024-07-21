@@ -10,7 +10,6 @@ MENU_OPTIONS = {
     '4': 'Tipos de datos, Identificadores',
     '5': 'Clases, Objetos, Herencia, Encapsulamiento y Polimorfismo',
     '6': 'Constructores y Destructores',
-    '7': 'Dashboard',
 }
 
 
