@@ -1,0 +1,19 @@
+[
+  {
+    "nombre": "Juan Perez",
+    "ID_usuario": "U001",
+    "libros_prestados": [
+      {
+        "titulo": "cien a\u00f1os de soledad",
+        "autor": "Gabriel Garcia Marquez",
+        "categoria": "ficcion",
+        "ISBN": "1234567890"
+      }
+    ]
+  },
+  {
+    "nombre": "Ana Gomez",
+    "ID_usuario": "U002",
+    "libros_prestados": []
+  }
+]
